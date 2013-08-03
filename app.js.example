@@ -1,0 +1,28 @@
+var win = Ti.UI.createWindow({
+	backgroundColor : "#ccc",
+	layout : "vertical"
+});
+
+
+var youtubeplayer = require('titutorial.youtubeplayer');
+Ti.API.info("module is => " + youtubeplayer);
+
+
+// Create a Button.
+var play = Ti.UI.createButton({
+	title : 'play',
+	height : '40dp',
+	width : '100dp',
+	top : '100dp'
+});
+
+// Listen for click events.
+play.addEventListener('click', function() {
+	youtubeplayer.example("welcome");
+});
+
+// Add to the parent view.
+win.add(play);
+
+
+win.open(); 

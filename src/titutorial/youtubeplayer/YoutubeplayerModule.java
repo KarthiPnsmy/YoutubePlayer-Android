@@ -45,31 +45,18 @@ public class YoutubeplayerModule extends KrollModule
 
 	// Methods
 	@Kroll.method
-	public void example(String videoId)
+	public void playVideo(String videoId)
 	{
+		if(videoId == null || videoId.length() == 0){
+			return;
+		}
 		
 		Activity activity = TiApplication.getAppRootOrCurrentActivity();
 		Log.d(TAG, "example called videoId = "+videoId);
-		Intent lVideoIntent = new Intent(null, Uri.parse("ytv://"
-				+ "4Gy3_MWGgaY"), activity,
+		Intent videoIntent = new Intent(null, Uri.parse("ytv://"
+				+ videoId.toString()), activity,
 				OpenYouTubePlayerActivity.class);
-		activity.startActivity(lVideoIntent);
-		
-		Toast.makeText(getActivity(), "example called videoId = "+videoId, Toast.LENGTH_LONG);
-	}
-	
-	// Properties
-	@Kroll.getProperty
-	public String getExampleProp()
-	{
-		Log.d(TAG, "get example property");
-		return "hello world";
-	}
-	
-	
-	@Kroll.setProperty
-	public void setExampleProp(String value) {
-		Log.d(TAG, "set example property: " + value);
+		activity.startActivity(videoIntent);
 	}
 
 }

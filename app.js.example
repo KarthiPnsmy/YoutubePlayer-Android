@@ -4,21 +4,21 @@ var win = Ti.UI.createWindow({
 });
 
 
-var youtubeplayer = require('titutorial.youtubeplayer');
-Ti.API.info("module is => " + youtubeplayer);
+var youtubePlayer = require('titutorial.youtubeplayer');
+Ti.API.info("module is => " + youtubePlayer);
 
 
 // Create a Button.
 var play = Ti.UI.createButton({
-	title : 'play',
+	title : 'Play Video',
 	height : '40dp',
-	width : '100dp',
+	width : '200dp',
 	top : '100dp'
 });
 
 // Listen for click events.
 play.addEventListener('click', function() {
-	youtubeplayer.example("welcome");
+	youtubePlayer.playVideo("FjMs_imWkFM");
 });
 
 // Add to the parent view.

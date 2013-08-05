@@ -21,38 +21,34 @@ import android.content.Intent;
 import android.net.Uri;
 import android.widget.Toast;
 
-@Kroll.module(name="Youtubeplayer", id="titutorial.youtubeplayer")
-public class YoutubeplayerModule extends KrollModule
-{
+@Kroll.module(name = "Youtubeplayer", id = "titutorial.youtubeplayer")
+public class YoutubeplayerModule extends KrollModule {
 
 	// Standard Debugging variables
 	private static final String TAG = "YoutubeplayerModule";
 
 	// You can define constants with @Kroll.constant, for example:
 	// @Kroll.constant public static final String EXTERNAL_NAME = value;
-	
-	public YoutubeplayerModule()
-	{
+
+	public YoutubeplayerModule() {
 		super();
 	}
 
 	@Kroll.onAppCreate
-	public static void onAppCreate(TiApplication app)
-	{
+	public static void onAppCreate(TiApplication app) {
 		Log.d(TAG, "inside onAppCreate");
-		// put module init code that needs to run when the application is created
+		// put module init code that needs to run when the application is
+		// created
 	}
 
 	// Methods
 	@Kroll.method
-	public void playVideo(String videoId)
-	{
-		if(videoId == null || videoId.length() == 0){
+	public void playVideo(String videoId) {
+		if (videoId == null || videoId.length() == 0) {
 			return;
 		}
-		
+
 		Activity activity = TiApplication.getAppRootOrCurrentActivity();
-		Log.d(TAG, "example called videoId = "+videoId);
 		Intent videoIntent = new Intent(null, Uri.parse("ytv://"
 				+ videoId.toString()), activity,
 				OpenYouTubePlayerActivity.class);
@@ -60,4 +56,3 @@ public class YoutubeplayerModule extends KrollModule
 	}
 
 }
-

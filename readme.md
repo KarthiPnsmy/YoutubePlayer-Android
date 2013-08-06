@@ -24,7 +24,7 @@ Takes video id as input parameter and plays video automatcally. ID may be a vide
 If it is playlist id then it will play the latest video added to a YouTube playlist
 
 ## Usage
-
+```
 var youtubePlayer = require('titutorial.youtubeplayer');
 Ti.API.info("module is => " + youtubePlayer);
 
@@ -40,6 +40,10 @@ play.addEventListener('click', function() {
 });
 
 win.add(play);
+```
+
+###Screenshot
+![Video Screenshot](https://github.com/railskarthi/YoutubePlayer-Android/blob/master/screens/screenshot.png?width=480&height=320&raw=true "Optional title")
 
 ## Author
 

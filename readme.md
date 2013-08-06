@@ -9,9 +9,9 @@ Android component that plays videos from YouTube. This module is focused on crea
 ## Accessing the youtubeplayer Module
 
 To access this module from JavaScript, you would do the following:
-
+```javascript
 	var youtubePlayer = require("titutorial.youtubeplayer");
-
+```
 The youtubeplayer variable is a reference to the Module object.
 
 ## Reference

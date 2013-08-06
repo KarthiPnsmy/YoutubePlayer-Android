@@ -4,7 +4,7 @@
 
 Android component that plays videos from YouTube. This module is focused on creating an Android activity that allows developers to play videos that are hosted on YouTube
 
-NOTE: If module unable to get the RTSP url from YouTube server, then video cannot be played.
+**NOTE: If module unable to get the RTSP url from YouTube server, then video cannot be played.**
 
 ## Accessing the youtubeplayer Module
 
@@ -24,7 +24,7 @@ Takes video id as input parameter and plays video automatcally. ID may be a vide
 If it is playlist id then it will play the latest video added to a YouTube playlist
 
 ## Usage
-```
+```javascript
 var youtubePlayer = require('titutorial.youtubeplayer');
 Ti.API.info("module is => " + youtubePlayer);
 

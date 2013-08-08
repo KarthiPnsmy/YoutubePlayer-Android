@@ -54,5 +54,19 @@ public class YoutubeplayerModule extends KrollModule {
 				OpenYouTubePlayerActivity.class);
 		activity.startActivity(videoIntent);
 	}
+	
+	// Methods
+	@Kroll.method
+	public void playPlayListVideo(String playListId) {
+		if (playListId == null || playListId.length() == 0) {
+			return;
+		}
+
+		Activity activity = TiApplication.getAppRootOrCurrentActivity();
+		Intent videoIntent = new Intent(null, Uri.parse("ytpl://"
+				+ playListId.toString()), activity,
+				OpenYouTubePlayerActivity.class);
+		activity.startActivity(videoIntent);
+	}
 
 }

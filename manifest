@@ -4,10 +4,10 @@
 #
 version: 0.1
 apiversion: 2
-description: My module
-author: Your Name
+description: Android module that plays videos from YouTube
+author: Karthi Ponnusamy
 license: Specify your license
-copyright: Copyright (c) 2013 by Your Company
+copyright: Copyright (c) 2013 by TitaniumTutorial
 
 
 # these should not be edited
@@ -15,4 +15,4 @@ name: youtubeplayer
 moduleid: titutorial.youtubeplayer
 guid: fe4633ad-a640-4881-b95e-06673ce33b64
 platform: android
-minsdk: 3.1.0.GA
+minsdk: 3.0.0.GA

@@ -18,28 +18,57 @@ The youtubeplayer variable is a reference to the Module object.
 
 This module based on Android YouTube Player(http://code.google.com/p/android-youtube-player/) library.
 
-### playVideo(id)
+## Methods
 
-Takes video id as input parameter and plays video automatcally. ID may be a video id or playlist id.
-If it is playlist id then it will play the latest video added to a YouTube playlist
+### playVideo(videoId)
+
+Takes video id as input parameter and plays video automatcally. 
+
+### playPlayListVideo(playListId)
+
+Takes playlist id as input parameter then it will play the latest video added to a YouTube playlist
 
 ## Usage
 
-var youtubePlayer = require('titutorial.youtubeplayer');
-Ti.API.info("module is => " + youtubePlayer);
-
-var play = Ti.UI.createButton({
-	title : 'Play Video',
-	height : '40dp',
-	width : '200dp',
-	top : '100dp'
+var win = Ti.UI.createWindow({
+	backgroundColor : "#fff",
+	layout : "vertical"
 });
 
-play.addEventListener('click', function() {
+var youtubePlayer = require('titutorial.youtubeplayer');
+Ti.API.info("module is => " + youtubePlayer);
+/*
+ * Play video by videoId
+ */
+var playVideo = Ti.UI.createButton({
+	title : 'Play video',
+	height : '40dp',
+	width : Ti.UI.SIZE,
+	top : '100dp'
+});
+win.add(playVideo);
+
+playVideo.addEventListener('click', function() {
 	youtubePlayer.playVideo("FjMs_imWkFM");
 });
 
-win.add(play);
+/*
+ * Play video by playListId
+ */
+var playPlayListVideo = Ti.UI.createButton({
+	title : 'Play playlist video',
+	height : '40dp',
+	width : Ti.UI.SIZE,
+	top : '100dp'
+});
+
+playPlayListVideo.addEventListener('click', function() {
+	youtubePlayer.playPlayListVideo("PLB03EA9545DD188C3");
+});
+
+win.add(playPlayListVideo);
+
+win.open();
 
 ## Author
 
